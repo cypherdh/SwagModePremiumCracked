@@ -1,5 +1,6 @@
 -- // Auto Execution Support
 if not game:IsLoaded() then game.Loaded:wait() end
+repeat wait() until game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Character:findFirstChild("FULLY_LOADED_CHAR")
 -- // Main Script
 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Changed)) do
     v:Disable()
