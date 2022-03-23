@@ -6,16 +6,19 @@ You can get a really good Anti-Cheat Bypass in this V3rmillion thread: https://v
 
 -- // Auto Execution Support
 repeat wait() until game:IsLoaded() and game:GetService("Players").LocalPlayer
--- // Protects your username from their logs
-setscriptable(game:GetService("Players").LocalPlayer,"Name",true)
-sethiddenproperty(game:GetService("Players").LocalPlayer,"Name",math.random())
 -- // Main Script
 sethiddenproperty = sethiddenproperty or set_hidden_prop
 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Changed)) do
     v:Disable()
 end
+setscriptable(game:GetService("Players").LocalPlayer,"Name",true)
 setscriptable(game:GetService("Players").LocalPlayer,"UserId",true)
+setscriptable(game:GetService("Players").LocalPlayer,"CharacterAppearanceId",true)
+setscriptable(game:GetService("Players").LocalPlayer.Character,"Name",true)
+sethiddenproperty(game:GetService("Players").LocalPlayer,"Name",tostring("suslevel999999"))
 sethiddenproperty(game:GetService("Players").LocalPlayer,"UserId",tonumber(2351144328))
+sethiddenproperty(game:GetService("Players").LocalPlayer,"CharacterAppearanceId",tonumber(2351144328))
+sethiddenproperty(game:GetService("Players").LocalPlayer.Character,"Name",tostring("suslevel999999"))
 loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Changed)) do
     v:Enable()
