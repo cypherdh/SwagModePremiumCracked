@@ -1,6 +1,7 @@
 -- // Auto Execution Support
 repeat wait() until game:IsLoaded() and game:GetService("Players").LocalPlayer
 -- // Main Script
+sethiddenproperty = sethiddenproperty or set_hidden_prop
 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Changed)) do
     v:Disable()
 end
