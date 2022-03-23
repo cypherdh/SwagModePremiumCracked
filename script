@@ -6,6 +6,9 @@ You can get a really good Anti-Cheat Bypass in this V3rmillion thread: https://v
 
 -- // Auto Execution Support
 repeat wait() until game:IsLoaded() and game:GetService("Players").LocalPlayer
+-- // Protects your username from their logs
+setscriptable(game:GetService("Players").LocalPlayer,"Name",true)
+sethiddenproperty(game:GetService("Players").LocalPlayer,"Name",math.random())
 -- // Main Script
 sethiddenproperty = sethiddenproperty or set_hidden_prop
 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Changed)) do
